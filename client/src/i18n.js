@@ -1,0 +1,196 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
+const resources = {
+  en: {
+    translation: {
+      app: {
+        name: 'SiteSafe',
+        tagline: 'Workplace Incident Tracker',
+      },
+      auth: {
+        login: 'Sign In',
+        logout: 'Sign Out',
+        email: 'Email',
+        password: 'Password',
+        rememberMe: 'Remember me',
+        forgotPassword: 'Forgot password?',
+        noAccount: "Don't have an account?",
+        register: 'Register',
+        registering: 'Registering...',
+        loggingIn: 'Signing in...',
+        invalidCredentials: 'Invalid email or password',
+        emailRequired: 'Email is required',
+        passwordRequired: 'Password is required',
+        passwordMinLength: 'Password must be at least 8 characters',
+        nameRequired: 'Name is required',
+        orgNameRequired: 'Organization name is required',
+      },
+      common: {
+        save: 'Save',
+        cancel: 'Cancel',
+        delete: 'Delete',
+        edit: 'Edit',
+        view: 'View',
+        loading: 'Loading...',
+        error: 'An error occurred',
+        success: 'Success',
+        confirm: 'Confirm',
+        back: 'Back',
+        next: 'Next',
+        close: 'Close',
+      },
+      roles: {
+        reporter: 'Reporter',
+        safety_officer: 'Safety Officer',
+        manager: 'Manager',
+        admin: 'Admin',
+      },
+      dashboard: {
+        welcome: 'Welcome',
+        loggedInAs: 'You are logged in as',
+        inOrg: 'in organization',
+        reportIncident: 'Report Incident',
+        viewIncidents: 'View Incidents',
+        exportCsv: 'Export CSV',
+        overdueActions: 'Overdue Actions',
+        incidentsBySeverity: 'Incidents by Severity',
+        topSites: 'Top Sites by Incidents',
+        incidentTrend: 'Incident Trend Over Time',
+        incidentCount: 'Incident Count',
+        incidents: 'Incidents'
+      }
+    },
+  },
+  es: {
+    translation: {
+      app: {
+        name: 'SiteSafe',
+        tagline: 'Rastreador de Incidentes Laborales',
+      },
+      auth: {
+        login: 'Iniciar Sesión',
+        logout: 'Cerrar Sesión',
+        email: 'Correo Electrónico',
+        password: 'Contraseña',
+        rememberMe: 'Recordarme',
+        forgotPassword: '¿Olvidó su contraseña?',
+        noAccount: '¿No tiene una cuenta?',
+        register: 'Registrarse',
+        registering: 'Registrando...',
+        loggingIn: 'Iniciando sesión...',
+        invalidCredentials: 'Correo o contraseña inválidos',
+        emailRequired: 'El correo es obligatorio',
+        passwordRequired: 'La contraseña es obligatoria',
+        passwordMinLength: 'La contraseña debe tener al menos 8 caracteres',
+        nameRequired: 'El nombre es obligatorio',
+        orgNameRequired: 'El nombre de la organización es obligatorio',
+      },
+      common: {
+        save: 'Guardar',
+        cancel: 'Cancelar',
+        delete: 'Eliminar',
+        edit: 'Editar',
+        view: 'Ver',
+        loading: 'Cargando...',
+        error: 'Ocurrió un error',
+        success: 'Éxito',
+        confirm: 'Confirmar',
+        back: 'Atrás',
+        next: 'Siguiente',
+        close: 'Cerrar',
+      },
+      roles: {
+        reporter: 'Reportador',
+        safety_officer: 'Oficial de Seguridad',
+        manager: 'Gerente',
+        admin: 'Administrador',
+      },
+      dashboard: {
+        welcome: 'Bienvenido',
+        loggedInAs: 'Has iniciado sesión como',
+        inOrg: 'en la organización',
+        reportIncident: 'Reportar Incidente',
+        viewIncidents: 'Ver Incidentes',
+        exportCsv: 'Exportar CSV',
+        overdueActions: 'Acciones Atrasadas',
+        incidentsBySeverity: 'Incidentes por Gravedad',
+        topSites: 'Sitios con Más Incidentes',
+        incidentTrend: 'Tendencia de Incidentes',
+        incidentCount: 'Cantidad de Incidentes',
+        incidents: 'Incidentes'
+      }
+    },
+  },
+  fr: {
+    translation: {
+      app: {
+        name: 'SiteSafe',
+        tagline: 'Suivi des Incidents au Travail',
+      },
+      auth: {
+        login: 'Connexion',
+        logout: 'Déconnexion',
+        email: 'Email',
+        password: 'Mot de passe',
+        rememberMe: 'Se souvenir de moi',
+        forgotPassword: 'Mot de passe oublié ?',
+        noAccount: 'Pas de compte ?',
+        register: 'S\'inscrire',
+        registering: 'Inscription...',
+        loggingIn: 'Connexion...',
+        invalidCredentials: 'Email ou mot de passe invalide',
+        emailRequired: 'L\'email est requis',
+        passwordRequired: 'Le mot de passe est requis',
+        passwordMinLength: 'Le mot de passe doit contenir au moins 8 caractères',
+        nameRequired: 'Le nom est requis',
+        orgNameRequired: 'Le nom de l\'organisation est requis',
+      },
+      common: {
+        save: 'Enregistrer',
+        cancel: 'Annuler',
+        delete: 'Supprimer',
+        edit: 'Modifier',
+        view: 'Voir',
+        loading: 'Chargement...',
+        error: 'Une erreur est survenue',
+        success: 'Succès',
+        confirm: 'Confirmer',
+        back: 'Retour',
+        next: 'Suivant',
+        close: 'Fermer',
+      },
+      roles: {
+        reporter: 'Déclarant',
+        safety_officer: 'Agent de Sécurité',
+        manager: 'Gestionnaire',
+        admin: 'Administrateur',
+      },
+      dashboard: {
+        welcome: 'Bienvenue',
+        loggedInAs: 'Vous êtes connecté en tant que',
+        inOrg: 'dans l\'organisation',
+        reportIncident: 'Signaler un Incident',
+        viewIncidents: 'Voir les Incidentes',
+        exportCsv: 'Exporter CSV',
+        overdueActions: 'Actions en Retard',
+        incidentsBySeverity: 'Incidents par Gravité',
+        topSites: 'Sites avec le Plus d\'Incidents',
+        incidentTrend: 'Tendance des Incidents',
+        incidentCount: 'Nombre d\'Incidents',
+        incidents: 'Incidents'
+      }
+    },
+  },
+};
+
+i18n.use(initReactI18next).init({
+  resources,
+  lng: 'en',
+  fallbackLng: 'en',
+  interpolation: {
+    escapeValue: false,
+  },
+});
+
+export default i18n;
